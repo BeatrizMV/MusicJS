@@ -1,14 +1,16 @@
 <p><strong>Componente cancion-detalles work in progress!</strong></p>
 <p><small>*Basado en el tutorial Heroes de Angular</small></p>
 <h2>Selector de canciones</h2>
-<div>
+<div class="list">
   <ul class="songs">
     <!--Don't forget the asterisk (*) in front of ngFor. It's a critical part of the syntax-->
     <!--listen for the song item click event and update the song details.-->
     <li *ngFor="let song of songs" (click)="onSelect(song)" [class.selected]="song === selectedSong">
-      <span class="badge">{{song.track}}</span>{{song.title}}
+      <span class="badge">{{song.track}}</span><span>{{song.title}}</span>
     </li>
   </ul>
 </div>
 
-<app-detallescancion [song]="selectedSong"></app-detallescancion>
+<div>
+  <app-detallescancion [song]="selectedSong"></app-detallescancion>
+</div>

@@ -1,0 +1,3 @@
+<div id='nav-menu'>
+    <a *ngFor="let item of items" class="nav-item" (click)="onSelect(item)" [class.selected]="item === selectedItem">{{item}}</a>
+</div>

@@ -1,0 +1,25 @@
+.selected{
+  background-color: tomato;
+}
+
+.nav-item:hover{
+  color: tomato;
+  cursor: pointer;
+}
+
+.selected:hover{
+  color:black;
+}
+.nav-item{
+  padding: 1%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  display: inline-block;
+}
+
+#nav-menu{
+  padding: 0%;
+  margin: 1%;
+  width: 100%;
+  background-color: gray;
+}

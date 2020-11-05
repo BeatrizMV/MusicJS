@@ -13,7 +13,7 @@ export class CancionDetallesComponent implements OnInit {
   public songs = SONGS
 
   /*Event handler*/
-  selectedSong: Song;
+  public selectedSong: Song;
   onSelect(song: Song): void {
     this.selectedSong = song;
   }
