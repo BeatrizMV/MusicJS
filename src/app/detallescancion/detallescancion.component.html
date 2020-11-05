@@ -1,0 +1,16 @@
+<div *ngIf="song">
+  <h2>{{song.title | uppercase}}</h2>
+<div><span>Num: </span>{{song.track}}</div>
+<div><span>Composer: </span>{{song.composer}}</div>
+<div><span>Performer: </span>{{song.performer}}</div>
+<div><span>Style: </span>{{song.style}}</div>
+<div><span>Year: </span>{{song.year}}</div>
+<div><span>Time: </span>{{song.time}}</div>
+
+<!--
+<div>
+  <label><span>Composer: </span>
+    <input class="input" [(ngModel)]="song.composer" placeholder="Composer"/>
+  </label>
+</div>
+-->

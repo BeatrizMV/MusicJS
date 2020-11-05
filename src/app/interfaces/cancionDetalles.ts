@@ -1,5 +1,9 @@
 export interface Song {
-  id: number;
+  track: number;
   title: string;
-  composer: string;
-}
+  composer: string[];
+  performer: string [];
+  style: string[];
+  time: string;
+  year: string;
+  }

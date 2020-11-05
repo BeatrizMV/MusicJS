@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { CancionDetallesComponent } from './cancion-detalles/cancion-detalles.component';
 
 import { FormsModule} from '@angular/forms';
+import { DetallescancionComponent } from './detallescancion/detallescancion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CancionDetallesComponent
+    CancionDetallesComponent,
+    DetallescancionComponent
   ],
   imports: [
     BrowserModule,
