@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Song} from 'src/app/interfaces/cancionDetalles';
-import {SONGS} from 'src/app/mock-songs'
+import { SongService } from 'src/app/song.service'
 
 @Component({
   selector: 'app-cancion-detalles',
@@ -9,8 +9,7 @@ import {SONGS} from 'src/app/mock-songs'
 })
 export class CancionDetallesComponent implements OnInit {
 
-  public song: Song
-  public songs = SONGS
+  public songs: Song[]
 
   /*Event handler*/
   public selectedSong: Song;
@@ -18,9 +17,14 @@ export class CancionDetallesComponent implements OnInit {
     this.selectedSong = song;
   }
 
-  constructor() { }
+  getSongs(): void {
+    this.songs = this.songService.getSongs();
+  }
+
+  constructor(private songService: SongService) { }
 
   ngOnInit(): void {
+    this.getSongs();
   }
 
 }
