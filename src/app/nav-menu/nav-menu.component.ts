@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class NavMenuComponent implements OnInit {
 
   public items =[
-    "Inicio",
-    "Buscar",
-    "Biblioteca"
+    "Reproducción",
+    "Foto",
+    "Play"
   ];
 
   public selectedItem:string

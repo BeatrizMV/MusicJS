@@ -1,9 +1,9 @@
 .selected{
-  background-color: tomato;
+  background-color: #369;;
 }
 
 .nav-item:hover{
-  color: tomato;
+  color: #369;
   cursor: pointer;
 }
 
@@ -19,7 +19,8 @@
 
 #nav-menu{
   padding: 0%;
-  margin: 1%;
   width: 100%;
-  background-color: gray;
+  background-color: #353232;
+  position: fixed;
+  bottom: 0px;  
 }

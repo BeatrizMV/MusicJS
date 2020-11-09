@@ -2,3 +2,7 @@ all span{
   text-align: left;
   font-weight: bolder;
 }
+
+div {
+  color:whitesmoke;
+}

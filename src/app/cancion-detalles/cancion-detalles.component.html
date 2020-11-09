@@ -1,6 +1,5 @@
-<p><strong>Componente cancion-detalles work in progress!</strong></p>
-<p><small>*Basado en el tutorial Heroes de Angular</small></p>
-<h2>Selector de canciones</h2>
+<h2>Lista de canciones</h2>
+<main class="contenedor">
 <div class="list">
   <ul class="songs">
     <!--Don't forget the asterisk (*) in front of ngFor. It's a critical part of the syntax-->
@@ -13,7 +12,10 @@
     </li>
   </ul>
 </div>
-
+<div class="fondo">
+    <img class="imagenFondo" src="assets/images/fondo.jpg"/>
+</div>
+</main>
 <div>
   <app-detallescancion [song]="selectedSong"></app-detallescancion>
 </div>

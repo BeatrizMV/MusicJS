@@ -3,7 +3,7 @@
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
-  width: auto;
+  width: 100%;
 }
 .songs li {
   cursor: pointer;
@@ -12,20 +12,20 @@
   background-color: #EEE;
   margin: .5em;
   padding: .3em 0;
-  height: 2.6em;
+  height: 4em;
   border-radius: 4px;
 }
 .songs li:hover {
-  color: #607D8B;
+  color: #369;
   background-color: #DDD;
   left: .1em;
 }
 .songs li.selected {
-  background-color: #CFD8DC;
+  background-color: #369;
   color: white;
 }
 .songs li.selected:hover {
-  background-color: #BBD8DC;
+  background-color: #369;
   color: white;
 }
 .songs .badge {
@@ -52,7 +52,24 @@ div{
   margin: 1%;
 }
 .list{
-  columns: 2;
+  overflow:scroll;
+  flex-grow: 1;
+}
+.fondo{
+  /*height:800px;*/
+  width:500px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.imagenFondo{
+  max-width:100%;
+  max-height:100%;
+}
+.contenedor{
+  padding: 1em;
+  display: flex;
+  height: 70vh;
 }
 span{
   padding-right: 0.3em;
@@ -67,3 +84,8 @@ span{
   display: block;
   font-size: x-small;
 }
+h2{
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
