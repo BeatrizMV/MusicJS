@@ -12,7 +12,7 @@
   background-color: #EEE;
   margin: .5em;
   padding: .3em 0;
-  height: 1.6em;
+  height: 2.6em;
   border-radius: 4px;
 }
 .songs li:hover {
@@ -57,4 +57,13 @@ div{
 span{
   padding-right: 0.3em;
   padding-left: 0.3em;
+}
+.song-list-title{
+  display: block;
+  font-size: small;
+  font-weight: bold;
+}
+.song-list-album{
+  display: block;
+  font-size: x-small;
 }

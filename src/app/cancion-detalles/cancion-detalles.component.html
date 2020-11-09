@@ -6,7 +6,10 @@
     <!--Don't forget the asterisk (*) in front of ngFor. It's a critical part of the syntax-->
     <!--listen for the song item click event and update the song details.-->
     <li *ngFor="let song of songs" (click)="onSelect(song)" [class.selected]="song === selectedSong">
-      <!--<span class="badge">{{song.track}}</span>--><span>{{song.title}}</span>
+      <div>
+        <div class="song-list-title">{{song.title}}</div>
+        <div class="song-list-album">{{song.album}}</div>
+      </div>
     </li>
   </ul>
 </div>
