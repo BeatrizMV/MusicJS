@@ -89,3 +89,8 @@ h2{
   padding-top: 10px;
 }
 
+.detalle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
