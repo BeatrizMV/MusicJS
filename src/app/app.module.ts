@@ -9,6 +9,7 @@ import { FormsModule} from '@angular/forms';
 import { DetallescancionComponent } from './detallescancion/detallescancion.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { MainWindowComponent } from './main-window/main-window.component';
+import { ReproductorComponent } from './reproductor/reproductor.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MainWindowComponent } from './main-window/main-window.component';
     CancionDetallesComponent,
     DetallescancionComponent,
     NavMenuComponent,
-    MainWindowComponent
+    MainWindowComponent,
+    ReproductorComponent
   ],
   imports: [
     BrowserModule,

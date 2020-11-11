@@ -7,3 +7,9 @@ div {
   color:whitesmoke;
 }
 
+/*para dispositivos pequeños*/
+@media only screen and (max-width: 600px) {
+  .info {
+    display: none;
+  }
+}

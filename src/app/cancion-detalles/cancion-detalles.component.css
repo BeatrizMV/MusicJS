@@ -63,8 +63,7 @@ div{
   justify-content: flex-end;
 }
 .imagenFondo{
-  max-width:100%;
-  max-height:100%;
+  width:100%;
 }
 .contenedor{
   padding: 1em;
@@ -92,5 +91,22 @@ h2{
 .detalle{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+.rpr{
+  margin-right: 5%;
+  flex-grow: 1;
+}
+.dtc{
+  margin-left: 5%;
+  flex-grow: 1;
+}
+
+/*para dispositivos pequeños*/
+@media only screen and (max-width: 600px) {
+  .fondo {
+    display: none;
+  }
 }
