@@ -64,7 +64,7 @@ div{
   /*height:800px;*/
   width:500px;
   flex-grow: 1;
-  display: flex;
+  /*display: flex;*/
   justify-content: flex-end;
   flex-direction: column;
 }
@@ -107,14 +107,6 @@ h2{
   margin-right: 2em;
   margin-left: 2em;
   min-height: 9em;
-}
-.rpr{
-  margin-right: 5%;
-  flex-grow: 1;
-}
-.dtc{
-  margin-left: 5%;
-  flex-grow: 1;
 }
 
 /*para dispositivos pequeños*/

@@ -1,4 +1,13 @@
 h1{
-    padding-left: 40px;
-    padding-top: 10px;
+  padding-left: 10px;
   }
+.logocabecera {
+  width: 5em;
+  height: 5em;
+  border-radius: 2px;
+}
+.cont{
+ padding-left: 40px;
+ display: flex; 
+ padding-top: 20px;
+}
