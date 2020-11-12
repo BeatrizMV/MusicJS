@@ -15,11 +15,12 @@
 </div>
 <div class="fondo">
     <img class="imagenFondo" src="assets/images/LogoMJs.png"/>
+    <div class="detalle">
+      <app-detallescancion class="dtc" [song]="selectedSong"></app-detallescancion>
+    </div>
 </div>
 </main>
-<div class="detalle">
-  <app-detallescancion class="dtc" [song]="selectedSong"></app-detallescancion>
-</div>
+
 
   <app-reproductor></app-reproductor>
 
