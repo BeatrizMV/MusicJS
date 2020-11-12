@@ -1,3 +1,4 @@
+import { nullSafeIsEquivalent } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import {Song} from 'src/app/interfaces/cancionDetalles';
 import { SongService } from 'src/app/song.service'
@@ -14,7 +15,12 @@ export class CancionDetallesComponent implements OnInit {
   /*Event handler*/
   public selectedSong: Song;
   onSelect(song: Song): void {
-    this.selectedSong = song;
+    if(this.selectedSong === song){
+      this.selectedSong = null;
+    }else{
+      this.selectedSong = song;
+    }
+
   }
 
   getSongs(): void {
