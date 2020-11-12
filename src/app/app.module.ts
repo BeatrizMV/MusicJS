@@ -7,7 +7,6 @@ import { CancionDetallesComponent } from './cancion-detalles/cancion-detalles.co
 
 import { FormsModule} from '@angular/forms';
 import { DetallescancionComponent } from './detallescancion/detallescancion.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { MainWindowComponent } from './main-window/main-window.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
 
@@ -16,7 +15,6 @@ import { ReproductorComponent } from './reproductor/reproductor.component';
     AppComponent,
     CancionDetallesComponent,
     DetallescancionComponent,
-    NavMenuComponent,
     MainWindowComponent,
     ReproductorComponent
   ],

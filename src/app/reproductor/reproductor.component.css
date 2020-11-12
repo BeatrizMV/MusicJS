@@ -1,10 +1,29 @@
 .botones{
     width: 35px;
-}
-.reproductor{
+  }
+  .reproductor{
     flex-grow: 1;
     background-color: whitesmoke;
     width: 100%;
     min-width: 270px;
     padding: 2em;
+    position: fixed;
+    bottom: 0px;
+    display: inline-block;
+  }
+
+  /*
+.nav-item{
+  padding: 1%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  display: inline-block;
 }
+
+#nav-menu{
+  padding: 0%;
+  width: 100%;
+  background-color: #353232;
+  position: fixed;
+  bottom: 0px;  
+}*/

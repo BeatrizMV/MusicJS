@@ -54,6 +54,11 @@ div{
 .list{
   overflow:scroll;
   flex-grow: 1;
+  scrollbar-width: none;
+}
+/*para ocultar el scroll en Chrome, Safari and Opera*/
+.list::-webkit-scrollbar {
+  display: none;
 }
 .fondo{
   /*height:800px;*/
