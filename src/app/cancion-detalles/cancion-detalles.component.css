@@ -53,7 +53,7 @@ div{
 }
 .list{
   overflow:scroll;
-  flex-grow: 1;
+  /*flex-grow: 1;*/
   scrollbar-width: none;
 }
 /*para ocultar el scroll en Chrome, Safari and Opera*/
@@ -61,12 +61,11 @@ div{
   display: none;
 }
 .fondo{
-  /*height:800px;*/
-  width:500px;
-  flex-grow: 1;
-  /*display: flex;*/
+  
+  display: flex;
   justify-content: flex-end;
-  flex-direction: column;
+  flex-direction: row;
+  position: relative;
 }
 .imagenFondo{
   width:100%;
@@ -75,7 +74,7 @@ div{
 .contenedor{
   padding: 1em;
   display: flex;
-  height: 80vh;
+  height: 68vh;
 }
 span{
   padding-right: 0.3em;
@@ -100,14 +99,7 @@ h2{
   padding-top: 10px;
 }
 
-.detalle{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-right: 2em;
-  margin-left: 2em;
-  min-height: 9em;
-}
+
 
 /*para dispositivos pequeños*/
 @media only screen and (max-width: 600px) {

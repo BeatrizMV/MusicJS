@@ -11,3 +11,8 @@ h1{
  display: flex; 
  padding-top: 20px;
 }
+.fijar{
+  position:fixed;
+  bottom: 0em;
+  width: 100%;
+}

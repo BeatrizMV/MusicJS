@@ -7,6 +7,13 @@ div {
   color:whitesmoke;
 }
 
+.info{
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 10px;
+}
+
 /*para dispositivos pequeños*/
 @media only screen and (max-width: 600px) {
   .info {

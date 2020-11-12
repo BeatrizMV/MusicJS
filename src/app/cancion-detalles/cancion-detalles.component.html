@@ -15,11 +15,9 @@
     </ul>
   </div>
   <div class="fondo">
-    <div>
+    
+      <app-detallescancion class= "detalles" [song]="selectedSong"></app-detallescancion>
       <img class="imagenFondo" src="assets/images/LogoMJs.png" />
-    </div>
-    <div class="detalle">
-      <app-detallescancion [song]="selectedSong"></app-detallescancion>
-    </div>
+   
   </div>
 </main>
