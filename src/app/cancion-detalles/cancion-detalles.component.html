@@ -1,27 +1,25 @@
 <h2>Lista de canciones</h2>
 <main class="contenedor">
-<div class="list">
-  <ul class="songs">
-    <!--Don't forget the asterisk (*) in front of ngFor. It's a critical part of the syntax-->
-    <!--listen for the song item click event and update the song details.-->
-    <li *ngFor="let song of songs" (click)="onSelect(song)" [class.selected]="song === selectedSong">
-      <div>
-        <div class="song-list-track">{{song.track}}</div> <!--Número de pista en el album-->
-        <div class="song-list-title">{{song.title}}</div>
-        <div class="song-list-album">{{song.album}}</div>
-      </div>
-    </li>
-  </ul>
-</div>
-<div class="fondo">
-    <img class="imagenFondo" src="assets/images/LogoMJs.png"/>
-    <div class="detalle">
-      <app-detallescancion class="dtc" [song]="selectedSong"></app-detallescancion>
+  <div class="list">
+    <ul class="songs">
+      <!--Don't forget the asterisk (*) in front of ngFor. It's a critical part of the syntax-->
+      <!--listen for the song item click event and update the song details.-->
+      <li *ngFor="let song of songs" (click)="onSelect(song)" [class.selected]="song === selectedSong">
+        <div>
+          <div class="song-list-track">{{song.track}}</div>
+          <!--Número de pista en el album-->
+          <div class="song-list-title">{{song.title}}</div>
+          <div class="song-list-album">{{song.album}}</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="fondo">
+    <div>
+      <img class="imagenFondo" src="assets/images/LogoMJs.png" />
     </div>
-</div>
+    <div class="detalle">
+      <app-detallescancion [song]="selectedSong"></app-detallescancion>
+    </div>
+  </div>
 </main>
-
-
-  <app-reproductor></app-reproductor>
-
-
