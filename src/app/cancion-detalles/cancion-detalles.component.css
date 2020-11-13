@@ -61,7 +61,7 @@ div{
   display: none;
 }
 .fondo{
-  
+
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
@@ -72,9 +72,12 @@ div{
   border-radius: 8px;
 }
 .contenedor{
-  padding: 1em;
+  padding: 0 20em 0 20em;
   display: flex;
   height: 68vh;
+}
+#lista-title{
+  padding: 0 0 0 15em;
 }
 span{
   padding-right: 0.3em;
@@ -82,7 +85,7 @@ span{
 }
 .song-list-title{
   display: inline-block;
-  font-size: small;
+  font-size: medium;
   font-weight: bold;
 }
 .song-list-album{
@@ -91,7 +94,7 @@ span{
 }
 .song-list-track{
   display: inline;
-  font-size: small;
+  font-size: medium;
   font-weight: bold;
 }
 h2{
@@ -102,8 +105,57 @@ h2{
 
 
 /*para dispositivos pequeños*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .fondo {
     display: none;
+  }
+  .song-list-title{
+    display: inline-block;
+    font-size: small;
+    font-weight: bold;
+  }
+  .song-list-album{
+    display: inline-block;
+    font-size: x-small;
+  }
+  .song-list-track{
+    display: inline;
+    font-size: small;
+    font-weight: bold;
+  }
+  .contenedor{
+    padding: 0 2em 0 2em;
+    display: flex;
+    height: 68vh;
+  }
+  #lista-title{
+    padding: 0 0 0 6em;
+    font-size: 1em;
+  }
+}
+/*Dispositivos medianos*/
+@media only screen and (max-width: 1600px) {
+  .contenedor{
+    padding: 0 2em 0 2em;
+    display: flex;
+    height: 68vh;
+  }
+  #lista-title{
+    padding: 0 0 0 3em;
+    font-size: 1.5em;
+  }
+  .song-list-title{
+    display: inline-block;
+    font-size: small;
+    font-weight: bold;
+  }
+  .song-list-album{
+    display: inline-block;
+    font-size: x-small;
+  }
+  .song-list-track{
+    display: inline;
+    font-size: small;
+    font-weight: bold;
   }
 }
