@@ -22,5 +22,4 @@ export class DetallescancionComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

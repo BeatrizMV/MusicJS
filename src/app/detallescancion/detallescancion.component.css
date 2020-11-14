@@ -12,6 +12,10 @@ div {
   bottom: 8px;
   left: 16px;
   font-size: 10px;
+  background-color: black;
+  opacity: 65%;
+  padding: 1em;
+  border-radius: 5%;
 }
 
 /*para dispositivos pequeños*/

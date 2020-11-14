@@ -1,8 +1,6 @@
-
 import { Component, OnInit } from '@angular/core';
 import {Song} from 'src/app/interfaces/cancionDetalles';
-import { SongService } from 'src/app/song.service'
-import {Album} from '../interfaces/album';
+import { SongService } from 'src/app/song.service';
 import { AlbumService } from 'src/app/album.service';
 import { AlbumDetails } from '../interfaces/albumDetalles';
 
@@ -46,5 +44,4 @@ export class CancionDetallesComponent implements OnInit {
   ngOnInit(): void {
     this.getSongs();
   }
-
 }

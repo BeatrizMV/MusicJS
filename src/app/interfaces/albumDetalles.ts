@@ -7,3 +7,7 @@ export interface AlbumDetails {
   cover_img: string;
   style: string[];
 }
+export interface Album {
+  id: number,
+  details:AlbumDetails
+}
