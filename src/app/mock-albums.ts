@@ -10,7 +10,7 @@
   }
 */
 
-import{Album} from './interfaces/album';
+import{Album} from './interfaces/albumDetalles';
 
 export const ALBUMS : Album[] = [
   {id:1, details:{title: "Talkin' Verve: Roots of Acid Jazz", style: ["Hard Bop", "Soul Jazz"], release_date: "1996", cover_img:"0001_talkin_verve_roots_of_acid_jazz.jpg", description:"Designed to appeal to hip-hop and acid jazz fans, not jazz purists, Talkin' Verve: Roots of Acid Jazz collects 14 tracks Jimmy Smith cut for Verve during the late '60s. Comprised of pop covers and funky workouts, the music is 'jazzy', not jazz -- there's little improvisation on the record, but there is a lot of hot vamping, with Smith creating dense, funky chord clusters and bluesy leads. It's music that is devoted to the groove, and while a few of these cuts fall flat -- 'Ode to Billie Joe' has no funk in it, no matter how hard you try -- but for the most part Talkin' Verve is soulful fun. Not much of this sounds like acid jazz, especially since the rhythms are a little stiff, but it's enjoyable lite funk, and it's more palatable in the compilation than it is on their original albums."}},
