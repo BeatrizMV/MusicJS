@@ -1,7 +1,10 @@
-import { nullSafeIsEquivalent } from '@angular/compiler/src/output/output_ast';
+
 import { Component, OnInit } from '@angular/core';
 import {Song} from 'src/app/interfaces/cancionDetalles';
 import { SongService } from 'src/app/song.service'
+import {Album} from '../interfaces/album';
+import { AlbumService } from 'src/app/album.service';
+import { AlbumDetails } from '../interfaces/albumDetalles';
 
 @Component({
   selector: 'app-cancion-detalles',
@@ -10,24 +13,35 @@ import { SongService } from 'src/app/song.service'
 })
 export class CancionDetallesComponent implements OnInit {
 
-  public songs: Song[]
+  songs: Song[]
+  //albums: Album[];
 
   /*Event handler*/
-  public selectedSong: Song;
+  public songSelected: boolean = false;
+  selectedSong: Song;
   onSelect(song: Song): void {
     if(this.selectedSong === song){
       this.selectedSong = null;
+      this.songSelected = false;
     }else{
       this.selectedSong = song;
+      this.songSelected = true;
     }
-
   }
 
   getSongs(): void {
     this.songs = this.songService.getSongs();
+    //this.albums = this.albumService.getAlbums();
+  }
+  getAlbumDetails(id:number):AlbumDetails{
+    let details = this.albumService.getAlbumDetails(id);
+    return details;
   }
 
-  constructor(private songService: SongService) { }
+  constructor(
+    private songService: SongService,
+    private albumService: AlbumService
+    ) { }
 
   ngOnInit(): void {
     this.getSongs();

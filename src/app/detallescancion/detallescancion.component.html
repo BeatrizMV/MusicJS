@@ -1,9 +1,10 @@
 <div class="info" *ngIf="song">
-  <h2>{{song.album | uppercase}}</h2>
-<div><span>Track: </span>{{song.track}}</div>
-<div><span>Composers: </span>{{song.composer}}</div>
-<div><span>Performers: </span>{{song.performer}}</div>
-<div><span>Styles: </span>{{song.style}}</div>
-<div><span>Year: </span>{{song.year}}</div>
-<div><span>Time: </span>{{song.time}}</div>
+  <h2>{{getAlbum(song.album).title | uppercase}}</h2>
+  <div><span>Pista: </span>{{song.track}}</div>
+  <div><span>Duración: </span>{{song.time}}</div>
+  <div><span>Compositores: </span>{{song.composer}}</div>
+  <div><span>Intérpretes: </span>{{song.performer}}</div>
+  <div><span>Estilos: </span>{{getAlbum(song.album).style}}</div>
+  <div><span>Año de publicación de la canción: </span>{{song.year}}</div>
+  <div><span>Año de publicación del disco: </span>{{getAlbum(song.album).release_date}}</div>
 </div>
