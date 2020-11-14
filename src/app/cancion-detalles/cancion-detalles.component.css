@@ -61,7 +61,6 @@ div{
   display: none;
 }
 .fondo{
-
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
@@ -142,7 +141,7 @@ h2{
   }
   #lista-title{
     padding: 0 0 0 3em;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   .song-list-title{
     display: inline-block;
