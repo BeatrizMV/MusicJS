@@ -12,4 +12,26 @@ export class ReproductorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onPlay(){
+
+  }
+  onPause(){
+
+  }
+  onStope(){
+    
+  }
+  onRandom(){
+    
+  }
+  onBack(){
+    
+  }
+  onNext(){
+    
+  }
+  onLoop(){
+    
+  }
+
 }
