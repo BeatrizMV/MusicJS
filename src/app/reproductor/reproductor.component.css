@@ -1,6 +1,6 @@
 .botones{
     width: 20px;
-    margin-right: 3em;
+    margin-right: 5em;
   }
   .reproductor{
     flex-grow: 1;
@@ -21,20 +21,27 @@
     flex-grow: 1;
   }
   .infoTitle{
-    
+    font-size: 30px;
+    color: black;
   }
   .infoAuthor{
-    
+    font-size: 20px;
+    color: #369;
   }
   .barra{
     flex-grow: 1;
   }
   .cover{
     flex-grow: 1;
+    justify-content: center;
+    display: flex;
   }
   .btn{
     flex-grow: 2;
+    justify-content: center;
+    display: flex;
   }
   .img{
     width: 70px;
+    
   }
