@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import{Album} from './interfaces/album';
+import{Album} from './interfaces/albumDetalles';
 import { AlbumDetails } from './interfaces/albumDetalles';
 import {ALBUMS} from './mock-albums';
 
