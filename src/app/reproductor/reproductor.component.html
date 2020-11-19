@@ -1,8 +1,22 @@
 <div class="reproductor">
-    <img class="botones rotate" src="assets/images/alante.png" (click)="onBack()"/>
-    <img class="botones" src="assets/images/play.png" (click)="onPlay()" />
-    <img class="botones" src="assets/images/pausa.png" (click)="onPause()" />
-    <img class="botones" src="assets/images/alante.png" (click)="onNext()"/>
-    <img class="botones" src="assets/images/aleatorio.png"(click)="onRandom()"/>
-    <img class="botones" src="assets/images/repetir.png" (click)="onLoop()"/>
+
+    <div class="cover"> 
+        <img class="img" src="assets/images/LogoMJs.png"/>
+    </div>  
+    
+    <div class="info">
+        <div class="infoTitle">{{song.title}}</div>
+        <div class="infoAuthor">{{song.author}}</div>
+    </div>
+    <div class="btn">
+        <img class="botones" src="assets/images/aleatorio.png"(click)="onRandom()"/>
+        <img class="botones rotate" src="assets/images/alante.png" (click)="onBack()"/>
+        <img class="botones" *ngIf="stop" src="assets/images/play.png" (click)="onPlay()" />
+        <img class="botones" *ngIf="!stop" src="assets/images/pausa.png" (click)="onPause()">  
+        <img class="botones" src="assets/images/alante.png" (click)="onNext()"/> 
+        <img class="botones" src="assets/images/repetir.png" (click)="onLoop()"/>
+    </div>
+    <div class="barra">
+        Soy la barra de reproducción
+    </div>
 </div>

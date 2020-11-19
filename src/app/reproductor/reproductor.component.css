@@ -1,6 +1,6 @@
 .botones{
     width: 20px;
-    margin-right: 1em;
+    margin-right: 3em;
   }
   .reproductor{
     flex-grow: 1;
@@ -9,10 +9,32 @@
     min-width: 270px;
     padding: 1em;
     bottom: 0px;
-    display: inline-block;
+    display: inline-flex;
     border: 2px solid black;
     border-radius: 4px;
+    align-items: center;
   }
   .rotate{
     transform: rotate(180deg);
+  }
+  .info{
+    flex-grow: 1;
+  }
+  .infoTitle{
+    
+  }
+  .infoAuthor{
+    
+  }
+  .barra{
+    flex-grow: 1;
+  }
+  .cover{
+    flex-grow: 1;
+  }
+  .btn{
+    flex-grow: 2;
+  }
+  .img{
+    width: 70px;
   }
