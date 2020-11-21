@@ -70,7 +70,7 @@ div{
   overflow:scroll;
   /*flex-grow: 1;*/
   scrollbar-width: none;
-  width: 55%;
+  width: 650px;
 }
 /*para ocultar el scroll en Chrome, Safari and Opera*/
 .list::-webkit-scrollbar {
@@ -81,7 +81,7 @@ div{
   justify-content: flex-end;
   flex-direction: row;
   position: relative;
-  width: 55%;
+  width: 600px;
 }
 .imagenFondo{
   width:100%;
