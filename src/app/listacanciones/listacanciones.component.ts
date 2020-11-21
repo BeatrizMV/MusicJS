@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {Song} from 'src/app/interfaces/cancionDetalles';
-import { SongService } from 'src/app/song.service';
-import { AlbumService } from 'src/app/album.service';
+import { SongService } from 'src/app/services/song.service';
+import { AlbumService } from 'src/app/services/album.service';
 import { AlbumDetails } from '../interfaces/albumDetalles';
 
 @Component({
-  selector: 'app-cancion-detalles',
-  templateUrl: './cancion-detalles.component.html',
-  styleUrls: ['./cancion-detalles.component.css']
+  selector: 'app-listacanciones',
+  templateUrl: './listacanciones.component.html',
+  styleUrls: ['./listacanciones.component.css']
 })
-export class CancionDetallesComponent implements OnInit {
+export class ListacancionesComponent implements OnInit {
 
   songs: Song[]
   //albums: Album[];

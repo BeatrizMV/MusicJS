@@ -1,0 +1,16 @@
+.filter-input{
+  display: block;
+  color: white;
+  margin-left: 0.5em;
+}
+.name{
+  display: flex;
+  flex: auto;
+  align-content: center;
+
+}
+div label{
+  display: block;
+  color: white;
+  display: none;
+}

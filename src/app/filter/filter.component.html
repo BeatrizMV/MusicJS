@@ -1,0 +1,25 @@
+<!--
+  <mat-form-field appearance="fill">
+  <mat-label>Albums</mat-label>
+  <mat-select>
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let album of allalbums" [value]="album.details.title">{{album.details.title}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<form appearance="fill">
+  <div><label>Album</label></div>
+  <select matNativeControl id="mySelectId">
+    <option value="All" disabled selected></option>
+    <option *ngFor="let album of allalbums" [value]="album.details.title" value="album.details.title">{{album.details.title}}</option>
+  </select>
+</form>
+-->
+<form appearance="fill">
+  <div><label><h3>Filtro</h3></label></div>
+  <div class="filter-input"><div class="filter-input name">Canción</div><input type="text" id="songtitle" [(ngModel)]="filterdata.title" name="Título"></div>
+  <div class="filter-input"><div class="filter-input name">Compositor</div><input type="text" id="composer" [(ngModel)]="filterdata.composer" name='Compositor'></div>
+  <div class="filter-input"><div class="filter-input name">Interprete</div><input type="text" id="performer" [(ngModel)]="filterdata.performer" name='Interprete'></div>
+  <div class="filter-input"><div class="filter-input name">Album</div><input type="text" id="album" [(ngModel)]="filterdata.album" name='Album'></div>
+  <div class="filter-input"><div class="filter-input name">Estilo</div><input type="text" id="style" [(ngModel)]="filterdata.style" name='Estilo'></div>
+</form>

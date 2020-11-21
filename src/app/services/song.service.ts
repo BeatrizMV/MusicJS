@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import {Song} from 'src/app/interfaces/cancionDetalles';
-import {SONGS} from 'src/app/mock-songs'
+import {Song} from '../interfaces/cancionDetalles';
+import {SONGS} from '../../assets/data/mock-songs'
+
 
 @Injectable({
   providedIn: 'root'

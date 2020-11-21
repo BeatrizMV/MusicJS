@@ -8,8 +8,12 @@ h1{
 }
 .cont{
  padding-left: 40px;
- display: flex;
+ display: block;
  padding-top: 20px;
+}
+.filter-block{
+  display: none;
+  margin:0;
 }
 .fijar{
   display: block;
@@ -19,6 +23,7 @@ h1{
   padding-top: 2em;
 }
 #main-box{
+  display: block;
   bottom: 0;
   position: fixed;
   width: 100%;

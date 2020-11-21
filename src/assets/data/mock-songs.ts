@@ -1,4 +1,4 @@
-import{Song} from './interfaces/cancionDetalles';
+import{Song} from '../../app/interfaces/cancionDetalles';
 
 export const SONGS : Song[] = [
   {track: 1, title: "Blues for 3+1", composer: ["Jimmy Smith"], performer: ["Jimmy Smith"], time:"04:53", year:"1972",album:1},
