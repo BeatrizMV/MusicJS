@@ -15,11 +15,18 @@
   </select>
 </form>
 -->
-<form appearance="fill">
-  <div><label><h3>Filtro</h3></label></div>
-  <div class="filter-input"><div class="filter-input name">Canción</div><input type="text" id="songtitle" [(ngModel)]="filterdata.title" name="Título"></div>
-  <div class="filter-input"><div class="filter-input name">Compositor</div><input type="text" id="composer" [(ngModel)]="filterdata.composer" name='Compositor'></div>
-  <div class="filter-input"><div class="filter-input name">Interprete</div><input type="text" id="performer" [(ngModel)]="filterdata.performer" name='Interprete'></div>
-  <div class="filter-input"><div class="filter-input name">Album</div><input type="text" id="album" [(ngModel)]="filterdata.album" name='Album'></div>
-  <div class="filter-input"><div class="filter-input name">Estilo</div><input type="text" id="style" [(ngModel)]="filterdata.style" name='Estilo'></div>
-</form>
+
+<div class="selector">
+
+  <button type="button" class="filter-form" (click)="filter()">Buscar</button>
+  <select class="filter-form" [(ngModel)]="filterData.selector">
+    <option *ngFor="let option of filterOptions" value="{{option.key}}">{{option.name}}</option>
+  </select><!--*ngIf="filterData.selector"-->
+  <input class="filter-form input" [(ngModel)]="filterData.value" placeholder="...">
+
+
+
+</div>
+<div>
+<app-listacanciones [songs]="asongs"></app-listacanciones>
+</div>

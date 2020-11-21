@@ -1,16 +1,27 @@
-.filter-input{
-  display: block;
+.selector{
   color: white;
-  margin-left: 0.5em;
-}
-.name{
-  display: flex;
-  flex: auto;
-  align-content: center;
+  margin-left: 3%;
+  font-size: large;
 
 }
-div label{
+option{
   display: block;
-  color: white;
-  display: none;
+  width: 30px;
+  color: black;
+}
+
+
+.filter-form{
+  display: inline-block;
+  width:100px;
+  height: 35px;
+  margin: 0 5px 0 0;
+  background-color: white;
+}
+
+.filter-form.input{
+  width: 350px;
+}
+button:hover{
+  background-color: cyan;
 }

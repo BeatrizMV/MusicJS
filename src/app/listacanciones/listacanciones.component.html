@@ -13,6 +13,7 @@
         </div>
       </li>
     </ul>
+    <div class="no_res" *ngIf="songs.length==0">SIN RESULTADOS</div>
   </div>
   <div class="fondo">
       <app-detallescancion class= "detalles" [song]="selectedSong"></app-detallescancion>

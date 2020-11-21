@@ -1,7 +1,9 @@
-export interface FilterData {
-  title?:string,
-  composer?:string,
-  performer?:string,
-  album?:string,
-  style?:string
+export interface FilterDataValues {
+  selector:string,
+  value: string,
   }
+
+export interface FilterDataOptions{
+  key: string,
+  name: string,
+}

@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import {Song} from 'src/app/interfaces/cancionDetalles';
 import { SongService } from 'src/app/services/song.service';
 import { AlbumService } from 'src/app/services/album.service';
 import { AlbumDetails } from '../interfaces/albumDetalles';
+import { FilterService } from '../services/filter.service';
 
 @Component({
   selector: 'app-listacanciones',
@@ -11,12 +12,13 @@ import { AlbumDetails } from '../interfaces/albumDetalles';
 })
 export class ListacancionesComponent implements OnInit {
 
-  songs: Song[]
+  @Input() songs: Song[]
   //albums: Album[];
 
   /*Event handler*/
   public songSelected: boolean = false;
   selectedSong: Song;
+
   onSelect(song: Song): void {
     if(this.selectedSong === song){
       this.selectedSong = null;
@@ -27,21 +29,24 @@ export class ListacancionesComponent implements OnInit {
     }
   }
 
-  getSongs(): void {
-    this.songs = this.songService.getSongs();
-    //this.albums = this.albumService.getAlbums();
-  }
   getAlbumDetails(id:number):AlbumDetails{
     let details = this.albumService.getAlbumDetails(id);
     return details;
   }
 
   constructor(
-    private songService: SongService,
-    private albumService: AlbumService
+    private albumService: AlbumService,
+    private filterService:FilterService,
     ) { }
 
-  ngOnInit(): void {
-    this.getSongs();
+  ngOnChanges(changes: SimpleChanges){
+    this.selectedSong = null;
+    this.songSelected = false;
   }
+
+  ngOnInit(): void {
+    this.songs= this.filterService.selectedSongs;
+    console.log(this.songs.length);
+  }
+
 }

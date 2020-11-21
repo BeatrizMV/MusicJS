@@ -1,32 +1,39 @@
-h1{
-  padding-left: 10px;
-  }
-.logocabecera {
-  width: 5em;
-  height: 5em;
-  border-radius: 2px;
-}
-.cont{
- padding-left: 40px;
- display: block;
- padding-top: 20px;
-}
-.filter-block{
-  display: none;
-  margin:0;
-}
-.fijar{
+.cabacera{
   display: block;
   position: relative;
   bottom: 0em;
   width: 100%;
   padding-top: 2em;
 }
-#main-box{
+#app-box{
   display: block;
-  bottom: 0;
+  position: relative;
+  top: 0;
+}
+#filtro{
+  display: inline-block;
+
+  align-content: center;
+}
+#rep-box{
+  display: block;
   position: fixed;
+  bottom: 0;
   width: 100%;
+}
+
+h1{
+  display: inline;
+  padding-left: 10px;
+  margin: 0.1em;
+  vertical-align: top;
+  }
+.logocabecera {
+  display: inline;
+  width: 5em;
+  height: 5em;
+  border-radius: 2px;
+  margin: 1em;
 }
 
 /*para dispositivos pequeños*/
