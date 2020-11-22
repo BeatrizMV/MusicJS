@@ -37,13 +37,16 @@
     display: flex;
   }
   .btn{
-    flex-grow: 2;
+    flex-grow: 3;
     justify-content: center;
     display: flex;
   }
   .img{
     width: 70px;
-    
+  }
+
+  .player {
+    width: 100%;
   }
 
   
