@@ -4,6 +4,7 @@ import { SongService } from 'src/app/services/song.service';
 import { AlbumService } from 'src/app/services/album.service';
 import { AlbumDetails } from '../interfaces/albumDetalles';
 import { FilterService } from '../services/filter.service';
+import { SelectedSongService } from '../services/selected-song.service';
 
 @Component({
   selector: 'app-listacanciones',
@@ -21,12 +22,25 @@ export class ListacancionesComponent implements OnInit {
 
   onSelect(song: Song): void {
     if(this.selectedSong === song){
-      this.selectedSong = null;
-      this.songSelected = false;
+      /*Comentado este bloque para que no deseleccione, ya que 
+       al volver a hacer click en la misma cancion y convertir
+       selectedSong en null, hay errores de null pointer en el 
+       componente detallescancion.
+       He observado que en Spotify no deselecciona, por lo que 
+       tiene sentido que lo hagamos como ellos.
+      */
+      //this.selectedSong = null;
+      //this.setSelectedSong(null);
+      //this.songSelected = false;
     }else{
-      this.selectedSong = song;
+      //this.selectedSong = song;
+      this.setSelectedSong(song);
       this.songSelected = true;
     }
+  }
+
+  setSelectedSong(song: Song) {
+    this.selectedSongService.setSelectedSong(song);
   }
 
   getAlbumDetails(id:number):AlbumDetails{
@@ -37,6 +51,7 @@ export class ListacancionesComponent implements OnInit {
   constructor(
     private albumService: AlbumService,
     private filterService:FilterService,
+    private selectedSongService:SelectedSongService
     ) { }
 
   ngOnChanges(changes: SimpleChanges){
@@ -47,6 +62,7 @@ export class ListacancionesComponent implements OnInit {
   ngOnInit(): void {
     this.songs= this.filterService.selectedSongs;
     console.log(this.songs.length);
+    this.selectedSongService.currentSelectedSong.subscribe(s => this.selectedSong = s);
   }
 
 }

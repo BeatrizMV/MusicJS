@@ -1,12 +1,13 @@
 <div class="reproductor">
 
     <div class="cover"> 
-        <img class="img" src="assets/images/LogoMJs.png"/>
+            <img class="img" *ngIf="selectedSong" src="assets/images/{{getAlbumDetails(selectedSong.album).cover_img}}"/>
+            <img class="img" *ngIf="!selectedSong" src="assets/images/LogoMJs.png"/> 
     </div>  
     
-    <div class="info">
-        <div class="infoTitle">{{song.title}}</div>
-        <div class="infoAuthor">{{song.author}}</div>
+    <div class="info" *ngIf="selectedSong">
+        <div class="infoTitle">{{selectedSong.title}}</div>
+        <div class="infoAuthor">{{selectedSong.composer}}</div>
     </div>
     <div class="btn">
         <img class="botones" src="assets/images/aleatorio.png"(click)="onRandom()"/>
