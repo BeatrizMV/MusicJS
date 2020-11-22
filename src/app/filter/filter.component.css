@@ -2,7 +2,8 @@
   color: white;
   margin-left: 3%;
   font-size: large;
-
+  justify-content: flex-end;
+  display: flex;
 }
 option{
   display: block;
@@ -17,6 +18,7 @@ option{
   height: 35px;
   margin: 0 5px 0 0;
   background-color: white;
+  border-radius: 5px;
 }
 
 .filter-form.input{

@@ -7,7 +7,6 @@
     background-color: whitesmoke;
     width: 100%;
     min-width: 270px;
-    padding: 1em;
     bottom: 0px;
     display: inline-flex;
     border: 2px solid black;
@@ -37,13 +36,16 @@
     display: flex;
   }
   .btn{
-    flex-grow: 2;
+    flex-grow: 3;
     justify-content: center;
     display: flex;
   }
   .img{
     width: 70px;
-    
+  }
+
+  .player {
+    width: 100%;
   }
 
   

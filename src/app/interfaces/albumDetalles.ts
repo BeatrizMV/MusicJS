@@ -6,6 +6,7 @@ export interface AlbumDetails {
   ISMN?: string;
   cover_img: string;
   style: string[];
+  localPath: string;
 }
 export interface Album {
   id: number,
