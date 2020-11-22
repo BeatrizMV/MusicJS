@@ -6,4 +6,5 @@ export interface Song {
   performer: string [];
   time: string;
   year?:string;
+  localPath: string;
   }
