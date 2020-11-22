@@ -1,0 +1,32 @@
+<!--
+  <mat-form-field appearance="fill">
+  <mat-label>Albums</mat-label>
+  <mat-select>
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let album of allalbums" [value]="album.details.title">{{album.details.title}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<form appearance="fill">
+  <div><label>Album</label></div>
+  <select matNativeControl id="mySelectId">
+    <option value="All" disabled selected></option>
+    <option *ngFor="let album of allalbums" [value]="album.details.title" value="album.details.title">{{album.details.title}}</option>
+  </select>
+</form>
+-->
+
+<div class="selector">
+
+  <button type="button" class="filter-form" (click)="filter()">Buscar</button>
+  <select class="filter-form" [(ngModel)]="filterData.selector">
+    <option *ngFor="let option of filterOptions" value="{{option.key}}">{{option.name}}</option>
+  </select><!--*ngIf="filterData.selector"-->
+  <input class="filter-form input" [(ngModel)]="filterData.value" placeholder="...">
+
+
+
+</div>
+<div>
+<app-listacanciones [songs]="asongs"></app-listacanciones>
+</div>

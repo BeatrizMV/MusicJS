@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
-import{Album} from './interfaces/album';
-import { AlbumDetails } from './interfaces/albumDetalles';
-import {ALBUMS} from './mock-albums';
+import{Album} from '../interfaces/albumDetalles';
+import { AlbumDetails } from '../interfaces/albumDetalles';
+import {ALBUMS} from '../../assets/data/mock-albums';
 
 @Injectable({
   providedIn: 'root'

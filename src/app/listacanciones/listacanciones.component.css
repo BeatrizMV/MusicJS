@@ -1,4 +1,19 @@
-/* HeroesComponent's private CSS styles */
+.contenedor{
+  padding: 0 20em 0 20em;
+  display: flex;
+  height: 68vh;
+}
+.no_res{
+  color: white;
+  width: 55%;
+  font-size: x-large;
+}
+#app-filtro{
+  display: block;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
 .songs {
   margin: 0 0 2em 0;
   list-style-type: none;
@@ -55,6 +70,7 @@ div{
   overflow:scroll;
   /*flex-grow: 1;*/
   scrollbar-width: none;
+  width: 650px;
 }
 /*para ocultar el scroll en Chrome, Safari and Opera*/
 .list::-webkit-scrollbar {
@@ -65,16 +81,13 @@ div{
   justify-content: flex-end;
   flex-direction: row;
   position: relative;
+  width: 600px;
 }
 .imagenFondo{
   width:100%;
   border-radius: 8px;
 }
-.contenedor{
-  padding: 0 20em 0 20em;
-  display: flex;
-  height: 68vh;
-}
+
 #lista-title{
   padding: 0 0 0 15em;
 }

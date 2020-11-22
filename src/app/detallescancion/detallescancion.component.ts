@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { AlbumService } from '../album.service';
+import { AlbumService } from '../services/album.service';
 import { AlbumDetails } from '../interfaces/albumDetalles';
 import { Song } from '../interfaces/cancionDetalles';
 
