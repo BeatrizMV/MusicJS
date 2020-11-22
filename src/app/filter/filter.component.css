@@ -2,7 +2,8 @@
   color: white;
   margin-left: 3%;
   font-size: large;
-
+  justify-content: flex-end;
+  display: flex;
 }
 option{
   display: block;
