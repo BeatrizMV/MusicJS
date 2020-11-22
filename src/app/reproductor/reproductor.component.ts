@@ -19,7 +19,6 @@ export class ReproductorComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedSongService.currentSelectedSong.subscribe(s => this.selectedSong = s);
-    //this.valuePlayedTime = '00:00'
   }
 
   getAlbumDetails(id:number):AlbumDetails{
@@ -34,32 +33,6 @@ export class ReproductorComponent implements OnInit {
     const finalPath =  prefix + albumDetails.localPath + "/" + songLocalPath;
     console.log("pasando al reproductor el archivo: " +  finalPath);
     return finalPath;
-  }
-
- onPlay(){
-     /*this.audio.play();
-    this.interval = setInterval(function () {
-      //do nothing. this just keeps the bar refreshing
-    }, 1000);
-    this.stop = false;*/
-  }
-  onPause(){
-    /*clearInterval(this.interval);
-    this.audio.pause();
-    this.stop = true;*/
-  }
-
-  onRandom(){
-    
-  }
-  onBack(){
-    
-  }
-  onNext(){
-    
-  }
-  onLoop(){
-    
   }
 
 }
