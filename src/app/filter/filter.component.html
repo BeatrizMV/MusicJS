@@ -18,7 +18,7 @@
 
 <div class="selector">
 
-  <button mat-flat-button class="filter-form" (click)="filter()">Buscar</button>
+  <button mat-flat-button color="primary" class="filter-form" (click)="filter()">Buscar</button>
   <select class="filter-form" [(ngModel)]="filterData.selector">
     <option *ngFor="let option of filterOptions" value="{{option.key}}">{{option.name}}</option>
   </select><!--*ngIf="filterData.selector"-->
