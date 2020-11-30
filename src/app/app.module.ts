@@ -11,6 +11,7 @@ import { DetallescancionComponent } from './detallescancion/detallescancion.comp
 import { MainWindowComponent } from './main-window/main-window.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
 import { FilterComponent } from './filter/filter.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FilterComponent } from './filter/filter.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
