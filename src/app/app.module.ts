@@ -11,6 +11,10 @@ import { DetallescancionComponent } from './detallescancion/detallescancion.comp
 import { MainWindowComponent } from './main-window/main-window.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
 import { FilterComponent } from './filter/filter.component';
+//Angular material import
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,8 @@ import { FilterComponent } from './filter/filter.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
