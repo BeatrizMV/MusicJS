@@ -20,7 +20,7 @@
   padding: 0;
   width: 100%;
 }
-.songs li {
+.songs mat-list-item {
   cursor: pointer;
   position: relative;
   left: 0;
@@ -30,17 +30,17 @@
   height: 4em;
   border-radius: 4px;
 }
-.songs li:hover {
-  color: #369;
+.songs mat-list-item:hover {
+  color: #3f51b5;
   background-color: #DDD;
   left: .1em;
 }
-.songs li.selected {
-  background-color: #369;
+.songs mat-list-item.selected {
+  background-color: #3f51b5;
   color: white;
 }
-.songs li.selected:hover {
-  background-color: #369;
+.songs mat-list-item.selected:hover {
+  background-color: #3f51b5;
   color: white;
 }
 .songs .badge {
