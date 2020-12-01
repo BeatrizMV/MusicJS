@@ -10,7 +10,17 @@ option{
   width: 30px;
   color: black;
 }
-
+.filter-select {
+  background:whitesmoke;
+  display: inline-block;
+  width:100px;
+  height: 35px;
+  margin: 0 5px 0 0;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  border-radius: 3px;
+}
 
 .filter-form{
   display: inline-block;
@@ -20,9 +30,24 @@ option{
   /*background-color: white;
   border-radius: 5px; */
 }
+.field div {
+  padding: 0;
+  border: none;
+}
+
+/deep/ .mat-form-field-infix {
+  padding: 0;
+  border: none;
+}
+
+/deep/ .mat-form-field-appearance-legacy .mat-form-field-infix{
+  padding: 0;
+  border: none;
+}
 
 .filter-form.input{
   width: 350px;
+  background-color:whitesmoke;
 }
 button:hover{
   background-color: #369;
