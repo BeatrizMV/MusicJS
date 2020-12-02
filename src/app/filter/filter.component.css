@@ -52,3 +52,7 @@ option{
 button:hover{
   background-color: #369;
 }
+
+.selector button {
+  margin-left: 5px;
+}

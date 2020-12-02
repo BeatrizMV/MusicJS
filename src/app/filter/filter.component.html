@@ -16,13 +16,13 @@
 </form>
 -->
 <div class="selector">
-  <button mat-flat-button color="primary" class="filter-form" (click)="filter()">Buscar</button>
   <mat-select class="filter-select" [(ngModel)]="filterData.selector">
     <mat-option *ngFor="let option of filterOptions" value="{{option.key}}">{{option.name}}</mat-option>
   </mat-select><!--*ngIf="filterData.selector"-->
-  <mat-form-field id="form-field" class="field">  
+  <mat-form-field id="form-field" class="field"> 
     <input matInput class="filter-form input" [(ngModel)]="filterData.value" placeholder="">
   </mat-form-field>
+  <button mat-flat-button color="primary" class="filter-form" (click)="filter()"><mat-icon>search</mat-icon></button>
 </div>
 <div>
   <app-listacanciones [songs]="asongs"></app-listacanciones>
