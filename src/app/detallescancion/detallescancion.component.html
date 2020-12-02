@@ -1,10 +1,14 @@
-<div class="info" *ngIf="song">
-  <h2>{{getAlbum(song.album).title | uppercase}}</h2>
-  <div><span>Pista: </span>{{song.track}}</div>
-  <div><span>Duración: </span>{{song.time}}</div>
-  <div><span>Compositores: </span>{{song.composer}}</div>
-  <div><span>Intérpretes: </span>{{song.performer}}</div>
-  <div><span>Estilos: </span>{{getAlbum(song.album).style}}</div>
-  <div><span>Año de publicación de la canción: </span>{{song.year}}</div>
-  <div><span>Año de publicación del disco: </span>{{getAlbum(song.album).release_date}}</div>
-</div>
+<mat-card class="info" *ngIf="song">
+  <mat-card-title>{{getAlbum(song.album).title | uppercase}}</mat-card-title>
+  <mat-card-subtitle>Intérpretes: {{song.performer}}</mat-card-subtitle>
+    <mat-card-content>
+      <mat-list-item>
+      <mat-list-item>Compositores: {{song.composer}}</mat-list-item>
+      <mat-list-item>Estilos: {{getAlbum(song.album).style}}</mat-list-item>
+      <mat-list-item>Pista: {{song.track}}</mat-list-item>
+      <mat-list-item>Duración: {{song.time}}</mat-list-item>
+      <mat-list-item>Año de publicación de la canción: {{song.year}}</mat-list-item>
+      <mat-list-item>Año de publicación del disco: {{getAlbum(song.album).release_date}}</mat-list-item>
+    </mat-list-item>
+  </mat-card-content>
+</mat-card>

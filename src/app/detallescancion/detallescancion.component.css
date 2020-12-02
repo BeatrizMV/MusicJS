@@ -7,15 +7,20 @@ div {
   color:whitesmoke;
 }
 
+mat-card-subtitle{
+color: white;
+}
+
 .info{
   position: absolute;
   bottom: 8px;
   left: 16px;
   font-size: 10px;
-  background-color: black;
-  opacity: 65%;
+  background-color: #3f51b5;
+  opacity: 75%;
   padding: 1em;
   border-radius: 5%;
+  color: white;
 }
 
 /*para dispositivos pequeños*/
