@@ -119,6 +119,10 @@
               "devServerTarget": "ICC02-P10:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

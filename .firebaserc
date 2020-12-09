@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "musicjs-824ad": {
+      "hosting": {
+        "ICC02-P10": [
+          "musicjs-824ad"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "musicjs-824ad"
+  }
+}
