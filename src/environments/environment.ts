@@ -7,13 +7,13 @@ export const environment = {
   firebase: {
     apiKey: 'AIzaSyAiv_nJu0lxEoD8aa3oHGQ7TTGqB1Xw9Yk',
     authDomain: 'musicjs-824ad.firebaseapp.com',
-    databaseURL: '<your-database-URL>',
+    databaseURL: 'https://musicjs.firebaseapp.com/',
     projectId: 'musicjs-824ad',
     storageBucket: 'musicjs-824ad.appspot.com',
     messagingSenderId: '776391405785',
     appId: '1:776391405785:web:cbfca1aaf2dc9aebe78ec8',
-    measurementId: '<your-measurement-id>'
   }
+
 
 };
 

@@ -22,11 +22,11 @@ export class ListacancionesComponent implements OnInit {
 
   onSelect(song: Song): void {
     if(this.selectedSong === song){
-      /*Comentado este bloque para que no deseleccione, ya que 
+      /*Comentado este bloque para que no deseleccione, ya que
        al volver a hacer click en la misma cancion y convertir
-       selectedSong en null, hay errores de null pointer en el 
+       selectedSong en null, hay errores de null pointer en el
        componente detallescancion.
-       He observado que en Spotify no deselecciona, por lo que 
+       He observado que en Spotify no deselecciona, por lo que
        tiene sentido que lo hagamos como ellos.
       */
       //this.selectedSong = null;
@@ -61,7 +61,7 @@ export class ListacancionesComponent implements OnInit {
 
   ngOnInit(): void {
     this.songs= this.filterService.selectedSongs;
-    console.log(this.songs.length);
+    //console.log(this.songs.length);
     this.selectedSongService.currentSelectedSong.subscribe(s => this.selectedSong = s);
   }
 
