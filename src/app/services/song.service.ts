@@ -55,6 +55,7 @@ export class SongService {
           composer: snap.payload.doc.get('composer'),
           performer: snap.payload.doc.get('performer'),
           time: snap.payload.doc.get('time'),
+          title: snap.payload.doc.get('title'),
           year: snap.payload.doc.get('year'),
           localPath: snap.payload.doc.get('localPath'),
         }
