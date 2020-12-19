@@ -28,11 +28,16 @@ export class ReproductorComponent implements OnInit {
 
   getSongCompleteLocalPath(id:number): string {
     const albumDetails = this.albumService.getAlbumDetails(id);
-    const songLocalPath = this.selectedSong.localPath;
-    const prefix = "assets/music/"
-    const finalPath =  prefix + albumDetails.localPath + "/" + songLocalPath;
-    console.log("pasando al reproductor el archivo: " +  finalPath);
-    return finalPath;
+    if(albumDetails){
+      const songLocalPath = this.selectedSong.localPath;
+      const prefix = "assets/music/"
+      const finalPath =  prefix + albumDetails.localPath + "/" + songLocalPath;
+      console.log("pasando al reproductor el archivo: " +  finalPath);
+      return finalPath;
+    } else {
+      return null;
+    }
+    
   }
 
 }

@@ -1,7 +1,7 @@
 <div class="reproductor" *ngIf="selectedSong">
 
     <div class="cover"> 
-            <img class="img" src="assets/images/{{getAlbumDetails(selectedSong.album).cover_img}}"/>
+            <img class="img" src="assets/images/{{getAlbumDetails(selectedSong.album) && getAlbumDetails(selectedSong.album).cover_img}}"/>
     </div>  
     
     <div class="info">
@@ -9,7 +9,7 @@
         <div class="infoAuthor">{{selectedSong.composer}}</div>
     </div>
     
-     <div class="btn">
+     <div class="btn" *ngIf="selectedSong && selectedSong.album">
         <audio class="player" src="{{getSongCompleteLocalPath(selectedSong.album)}}" type="audio/mp3" controls autoplay></audio>
     </div>
 </div>

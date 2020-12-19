@@ -4,7 +4,7 @@ import {SONGS} from '../../assets/data/mock-songs'
 import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from '@angular/fire/firestore';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
-import { SIGBREAK } from 'constants';
+// import { SIGBREAK } from 'constants';
 import { ActivatedRouteSnapshot } from '@angular/router';
 
 
@@ -12,10 +12,9 @@ import { ActivatedRouteSnapshot } from '@angular/router';
   providedIn: 'root'
 })
 export class SongService {
-  getSongs(): Song[] {
+  getSongs(): Observable<Song[]> {
     //this.getSongsFB();
-    this.getSongsFB2().subscribe(console.log);
-    return SONGS
+    return this.getSongsFB2();
   }
 
 

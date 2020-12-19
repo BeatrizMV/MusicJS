@@ -36,6 +36,7 @@ export class ListacancionesComponent implements OnInit {
       //this.selectedSong = song;
       this.setSelectedSong(song);
       this.songSelected = true;
+      console.log(`Selected song: ${song.title}`);
     }
   }
 
