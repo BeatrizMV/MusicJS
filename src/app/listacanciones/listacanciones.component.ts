@@ -19,6 +19,7 @@ export class ListacancionesComponent implements OnInit {
   /*Event handler*/
   public songSelected: boolean = false;
   selectedSong: Song;
+  selectedSongsAlbumDetails: AlbumDetails;
 
   onSelect(song: Song): void {
     if(this.selectedSong === song){
@@ -36,17 +37,23 @@ export class ListacancionesComponent implements OnInit {
       //this.selectedSong = song;
       this.setSelectedSong(song);
       this.songSelected = true;
-      console.log(`Selected song: ${song.title}`);
+      console.log(`Selected song: ${song.title} and localPath ${song.localPath}`);
     }
   }
 
   setSelectedSong(song: Song) {
     this.selectedSongService.setSelectedSong(song);
+    this.getAlbumDetails(song);
   }
 
-  getAlbumDetails(id:number):AlbumDetails{
-    let details = this.albumService.getAlbumDetails(id);
-    return details;
+  getAlbumDetails(selectedSong: Song):void{
+    this.albumService.getAlbums().subscribe(theAlbums => {
+      theAlbums.forEach(album => {
+        if(album.id == selectedSong.album.id){
+          this.selectedSongsAlbumDetails = album.details; 
+        }
+      });
+    });
   }
 
   constructor(

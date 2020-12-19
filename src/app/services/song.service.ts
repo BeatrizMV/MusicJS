@@ -6,6 +6,7 @@ import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 // import { SIGBREAK } from 'constants';
 import { ActivatedRouteSnapshot } from '@angular/router';
+import { Album, AlbumDetails } from '../interfaces/albumDetalles';
 
 
 @Injectable({
@@ -57,14 +58,11 @@ export class SongService {
           title: snap.payload.doc.get('title'),
           year: snap.payload.doc.get('year'),
           localPath: snap.payload.doc.get('localPath'),
+          albumDetails: snap.payload.doc.get('album'), 
         }
       })
     }))
   }
-
-
-
-
 
   constructor(private firestore: AngularFirestore) { }
 }

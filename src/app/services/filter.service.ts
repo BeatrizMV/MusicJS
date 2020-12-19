@@ -3,7 +3,7 @@ import { FilterDataValues } from '../interfaces/filterData';
 import {Song} from 'src/app/interfaces/cancionDetalles';
 import { SongService } from 'src/app/services/song.service';
 import { AlbumService } from 'src/app/services/album.service';
-import { Album } from '../interfaces/albumDetalles';
+import { Album, AlbumDetails } from '../interfaces/albumDetalles';
 import {Observable, EMPTY} from 'rxjs';
 
 
@@ -21,7 +21,7 @@ export class  FilterService {
   filterSongs(data:FilterDataValues){
     //Devolver una lista de canciones que en la categoría data.selector contenga el valor data.value
     let songs:Observable<Song[]>;
-    let albums:Album[];
+    let albums:Observable<Album[]>;
     switch(data.selector){
       case 'title':
         songs = this.songService.getSongs();
@@ -59,20 +59,26 @@ export class  FilterService {
         break;
       case 'album':
       albums = this.albumService.getAlbums();
-      albums.forEach(album => {
-        if(album.details.title.toLocaleLowerCase().includes(data.value.toLocaleLowerCase())){
-            this.getAllSongsFromAlbum(album.id, this.selectedSongs);
-          }
-        });
+      albums.subscribe(theAlbums => {
+        theAlbums.forEach(album => {
+          if(album.details.title.toLocaleLowerCase().includes(data.value.toLocaleLowerCase())){
+              this.getAllSongsFromAlbum(album.id, this.selectedSongs);
+            }
+          });
+      });
+      
       
       break;
       case 'style':
         albums = this.albumService.getAlbums();
-        albums.forEach(album=>{
-          if(this.searchSubstringInArray(album.details.style, data.value)){
-              this.getAllSongsFromAlbum(album.id, this.selectedSongs);
-            }
-          });
+        albums.subscribe(theAlbums => {
+          theAlbums.forEach(album=>{
+            if(this.searchSubstringInArray(album.details.style, data.value)){
+                this.getAllSongsFromAlbum(album.id, this.selectedSongs);
+              }
+            });
+        });
+        
         
          break;
       default:
