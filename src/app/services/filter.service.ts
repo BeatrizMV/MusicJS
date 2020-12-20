@@ -22,6 +22,7 @@ export class  FilterService {
     //Devolver una lista de canciones que en la categoría data.selector contenga el valor data.value
     let songs:Observable<Song[]>;
     let albums:Observable<Album[]>;
+    this.selectedSongs = [];
     switch(data.selector){
       case 'title':
         songs = this.songService.getSongs();
@@ -94,10 +95,12 @@ export class  FilterService {
     let songs = this.songService.getSongs();
     songs.subscribe(theSongs => {
       theSongs.forEach(song=>{
-        if(song.album == albumId){
-          this.selectedSongs.push(song);
-        }
-      })
+        song.album.get().then(function(album) {
+          if(album.id == albumId){
+            selectedSongs.push(song);
+          }
+        });
+      });
     });
     
   }

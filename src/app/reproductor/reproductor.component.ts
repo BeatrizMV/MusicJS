@@ -19,7 +19,10 @@ export class ReproductorComponent implements OnInit {
               private selectedSongService: SelectedSongService) { }
 
   ngOnInit(): void {
-    this.selectedSongService.currentSelectedSong.subscribe(s => this.selectedSong = s);
+    this.selectedSongService.currentSelectedSong.subscribe(s => {
+      this.selectedSong = s;
+      this.getAlbumDetails();
+    });
   }
 
   getAlbumDetails():void{
@@ -27,8 +30,10 @@ export class ReproductorComponent implements OnInit {
     return details; */
     this.albumService.getAlbums().subscribe(theAlbums => {
       theAlbums.forEach(album => {
-        if(album.id == this.selectedSong.album.id){
-          this.selectedSongsAlbumDetails = album.details; 
+        if(this.selectedSong){
+          if(album.id == this.selectedSong.album.id){
+            this.selectedSongsAlbumDetails = album.details; 
+          }
         }
       });
     });
@@ -36,12 +41,12 @@ export class ReproductorComponent implements OnInit {
 
   getSongCompleteLocalPath(id:number): string {
     //const albumDetails = this.albumService.getAlbumDetails(id);
-    this.getAlbumDetails();
+    
     if(this.selectedSongsAlbumDetails){
       const songLocalPath = this.selectedSong.localPath;
       const prefix = "assets/music/"
       const finalPath =  prefix + this.selectedSongsAlbumDetails.localPath + "/" + songLocalPath;
-      console.log("pasando al reproductor el archivo: " +  finalPath);
+      //console.log("pasando al reproductor el archivo: " +  finalPath);
       return finalPath;
     } else {
       return null;
