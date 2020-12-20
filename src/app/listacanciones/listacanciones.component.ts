@@ -37,7 +37,7 @@ export class ListacancionesComponent implements OnInit {
       //this.selectedSong = song;
       this.setSelectedSong(song);
       this.songSelected = true;
-      console.log(`Selected song: ${song.title} and localPath ${song.localPath}`);
+      //console.log(`Selected song: ${song.title} and localPath ${song.localPath}`);
     }
   }
 
@@ -50,7 +50,7 @@ export class ListacancionesComponent implements OnInit {
     this.albumService.getAlbums().subscribe(theAlbums => {
       theAlbums.forEach(album => {
         if(album.id == selectedSong.album.id){
-          this.selectedSongsAlbumDetails = album.details; 
+          this.selectedSongsAlbumDetails = album.details;
         }
       });
     });

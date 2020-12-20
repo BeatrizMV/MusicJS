@@ -16,11 +16,11 @@ export class AlbumService {
     let details: AlbumDetails;
     this.getAlbums().subscribe(theAlbums => {
       theAlbums.forEach(album => {
-        if(album.id == id){details = album.details; return details;}
+        if (album.id == id) { details = album.details; return details; }
       });
     });
 
-    return details; 
+    return details;
 
 
 
@@ -28,20 +28,20 @@ export class AlbumService {
 
   getAlbums(): Observable<Album[]>{
     //return ALBUMS;
-    return this.firestore.collection('albums').snapshotChanges().pipe(map(snaps =>{
-      return snaps.map(snap =>{
+    return this.firestore.collection('albums').snapshotChanges().pipe(map(snaps => {
+      return snaps.map(snap => {
         return <Album>{
           id: snap.payload.doc.get('id'),
           details: {
+            id: snap.payload.doc.get('id'),
             title: snap.payload.doc.get('title'),
-          release_date: snap.payload.doc.get('release_date'),
-          cover_img: snap.payload.doc.get('cover_img'),
-          style: snap.payload.doc.get('style'),
-          localPath: snap.payload.doc.get('localPath'),
+            release_date: snap.payload.doc.get('release_date'),
+            cover_img: snap.payload.doc.get('cover_img'),
+            style: snap.payload.doc.get('style'),
+            localPath: snap.payload.doc.get('localPath'),
           }
-          
-        }
-      })
+        };
+      });
     }))
   }
   constructor(private firestore: AngularFirestore) { }
