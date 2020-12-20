@@ -13,26 +13,45 @@ export class ReproductorComponent implements OnInit {
 
   stop: true;
   selectedSong: Song;
+  selectedSongsAlbumDetails: AlbumDetails;
 
   constructor(private albumService: AlbumService, 
               private selectedSongService: SelectedSongService) { }
 
   ngOnInit(): void {
-    this.selectedSongService.currentSelectedSong.subscribe(s => this.selectedSong = s);
+    this.selectedSongService.currentSelectedSong.subscribe(s => {
+      this.selectedSong = s;
+      this.getAlbumDetails();
+    });
   }
 
-  getAlbumDetails(id:number):AlbumDetails{
-    let details = this.albumService.getAlbumDetails(id);
-    return details;
+  getAlbumDetails():void{
+    /*let details = this.albumService.getAlbumDetails(id);
+    return details; */
+    this.albumService.getAlbums().subscribe(theAlbums => {
+      theAlbums.forEach(album => {
+        if(this.selectedSong){
+          if(album.id == this.selectedSong.album.id){
+            this.selectedSongsAlbumDetails = album.details; 
+          }
+        }
+      });
+    });
   }
 
   getSongCompleteLocalPath(id:number): string {
-    const albumDetails = this.albumService.getAlbumDetails(id);
-    const songLocalPath = this.selectedSong.localPath;
-    const prefix = "assets/music/"
-    const finalPath =  prefix + albumDetails.localPath + "/" + songLocalPath;
-    console.log("pasando al reproductor el archivo: " +  finalPath);
-    return finalPath;
+    //const albumDetails = this.albumService.getAlbumDetails(id);
+    
+    if(this.selectedSongsAlbumDetails){
+      const songLocalPath = this.selectedSong.localPath;
+      const prefix = "assets/music/"
+      const finalPath =  prefix + this.selectedSongsAlbumDetails.localPath + "/" + songLocalPath;
+      //console.log("pasando al reproductor el archivo: " +  finalPath);
+      return finalPath;
+    } else {
+      return null;
+    }
+    
   }
 
 }
