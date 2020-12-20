@@ -29,3 +29,33 @@ color: white;
     display: none;
   }
 }
+
+
+/*EDITABLES*/
+
+input {
+  text-decoration: none;
+  color: blue;
+  background-color:whitesmoke;
+  border: red solid thin;
+  border-radius: 5px;
+  padding: 5px;
+}
+.buttons{
+  width: 15%;
+  display: inline-flex;
+  text-align: right;
+  background-color: transparent;
+  padding-right: 3%;
+}
+.title{
+  width: 85%;
+  display: inline-flex;
+}
+mat-icon{
+  color: white;
+  font-size: 250%;
+}
+mat-icon:hover{
+  color: black;
+}

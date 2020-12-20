@@ -20,6 +20,12 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 
+//Angular fire
+import { AngularFireModule, FirebaseApp } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { SongService } from './services/song.service';
+
 
 @NgModule({
   declarations: [
@@ -41,8 +47,10 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     MatCardModule,
     MatIconModule,
+    AngularFireModule.initializeApp(environment.firebase), //Importamos FireModule y le pasamos la configuración de enviroment.ts
+    AngularFirestoreModule,
   ],
-  providers: [],
+  providers: [SongService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

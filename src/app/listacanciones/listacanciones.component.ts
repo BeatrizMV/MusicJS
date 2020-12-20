@@ -19,14 +19,15 @@ export class ListacancionesComponent implements OnInit {
   /*Event handler*/
   public songSelected: boolean = false;
   selectedSong: Song;
+  selectedSongsAlbumDetails: AlbumDetails;
 
   onSelect(song: Song): void {
     if(this.selectedSong === song){
-      /*Comentado este bloque para que no deseleccione, ya que 
+      /*Comentado este bloque para que no deseleccione, ya que
        al volver a hacer click en la misma cancion y convertir
-       selectedSong en null, hay errores de null pointer en el 
+       selectedSong en null, hay errores de null pointer en el
        componente detallescancion.
-       He observado que en Spotify no deselecciona, por lo que 
+       He observado que en Spotify no deselecciona, por lo que
        tiene sentido que lo hagamos como ellos.
       */
       //this.selectedSong = null;
@@ -36,16 +37,23 @@ export class ListacancionesComponent implements OnInit {
       //this.selectedSong = song;
       this.setSelectedSong(song);
       this.songSelected = true;
+      //console.log(`Selected song: ${song.title} and localPath ${song.localPath}`);
     }
   }
 
   setSelectedSong(song: Song) {
     this.selectedSongService.setSelectedSong(song);
+    this.getAlbumDetails(song);
   }
 
-  getAlbumDetails(id:number):AlbumDetails{
-    let details = this.albumService.getAlbumDetails(id);
-    return details;
+  getAlbumDetails(selectedSong: Song):void{
+    this.albumService.getAlbums().subscribe(theAlbums => {
+      theAlbums.forEach(album => {
+        if(album.id == selectedSong.album.id){
+          this.selectedSongsAlbumDetails = album.details;
+        }
+      });
+    });
   }
 
   constructor(
@@ -61,7 +69,7 @@ export class ListacancionesComponent implements OnInit {
 
   ngOnInit(): void {
     this.songs= this.filterService.selectedSongs;
-    console.log(this.songs.length);
+    //console.log(this.songs.length);
     this.selectedSongService.currentSelectedSong.subscribe(s => this.selectedSong = s);
   }
 

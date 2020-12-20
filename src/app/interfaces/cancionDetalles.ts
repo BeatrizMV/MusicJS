@@ -1,5 +1,9 @@
+import { AlbumDetails } from "./albumDetalles";
+import {Observable} from 'rxjs';
+
 export interface Song {
-  album: number;
+  id?: string;
+  album: any;
   track: number;
   title: string;
   composer: string[];
@@ -7,4 +11,5 @@ export interface Song {
   time: string;
   year?:string;
   localPath: string;
-  }
+  albumDetails?: any;
+}

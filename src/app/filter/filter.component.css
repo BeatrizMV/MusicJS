@@ -48,6 +48,7 @@ option{
 .filter-form.input{
   width: 350px;
   background-color:whitesmoke;
+  color: black;
 }
 button:hover{
   background-color: #369;

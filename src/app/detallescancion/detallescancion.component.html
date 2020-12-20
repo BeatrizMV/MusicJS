@@ -1,14 +1,33 @@
 <mat-card class="info" *ngIf="song">
-  <mat-card-title>{{getAlbum(song.album).title | uppercase}}</mat-card-title>
-  <mat-card-subtitle>Intérpretes: {{song.performer}}</mat-card-subtitle>
+  <div class="title">
+    <mat-card-title >
+      <span *ngIf="!editable">
+        {{currentAlbumDetails && currentAlbumDetails.title | uppercase}}
+      </span>
+      <span *ngIf="editable">
+        <input class="input title" *ngIf="editable" #title [(ngModel)]="currentAlbumDetails.title" />
+      </span>
+    </mat-card-title>
+  </div>
+  <div class="buttons">
+    <mat-icon *ngIf="!editable" aria-hidden="false" aria-label="edit" (click)="edit()">edit</mat-icon>
+    <mat-icon *ngIf="editable" aria-hidden="false" aria-label="save" (click)="save({albumId: currentAlbumDetails.id, songId: song.id, title: currentAlbumDetails.title, performer: song.performer, style: currentAlbumDetails.style})">save</mat-icon>
+    <mat-icon *ngIf="editable" aria-hidden="false" aria-label="save" (click)="cancel()">close</mat-icon>
+  </div>
+  <mat-card-subtitle>Intérpretes: <span *ngIf="!editable">{{song.performer}}</span>
+    <input *ngIf="editable" #style [(ngModel)]="song.performer"/>
+  </mat-card-subtitle>
     <mat-card-content>
       <mat-list-item>
       <mat-list-item>Compositores: {{song.composer}}</mat-list-item>
-      <mat-list-item>Estilos: {{getAlbum(song.album).style}}</mat-list-item>
+      <mat-list-item>
+        Estilos: <span *ngIf="!editable">{{currentAlbumDetails && currentAlbumDetails.style}}</span>
+        <input *ngIf="editable" #style [(ngModel)]="currentAlbumDetails.style"/>
+      </mat-list-item>
       <mat-list-item>Pista: {{song.track}}</mat-list-item>
       <mat-list-item>Duración: {{song.time}}</mat-list-item>
       <mat-list-item>Año de publicación de la canción: {{song.year}}</mat-list-item>
-      <mat-list-item>Año de publicación del disco: {{getAlbum(song.album).release_date}}</mat-list-item>
+      <mat-list-item>Año de publicación del disco: {{currentAlbumDetails && currentAlbumDetails.release_date}}</mat-list-item>
     </mat-list-item>
   </mat-card-content>
 </mat-card>
