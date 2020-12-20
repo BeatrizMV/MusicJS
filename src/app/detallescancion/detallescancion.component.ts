@@ -13,16 +13,29 @@ import { SelectedSongService } from '../services/selected-song.service';
 export class DetallescancionComponent implements OnInit {
 
   @Input() song: Song;
+  currentAlbumDetails: AlbumDetails;
 
-  getAlbum(id:number):AlbumDetails{
-    let details = this.albumService.getAlbumDetails(id);
-    return details;
+  getAlbum():void{
+    /*let details = this.albumService.getAlbumDetails(id);
+    return details; */
+    this.albumService.getAlbums().subscribe(theAlbums => {
+      theAlbums.forEach(album => {
+        if(this.song){
+          if(album.id == this.song.album.id){
+            this.currentAlbumDetails = album.details; 
+          }
+        }
+      });
+    });
   }
 
   constructor(private albumService: AlbumService,
               private selectedSongService: SelectedSongService) { }
 
   ngOnInit(): void {
-    this.selectedSongService.currentSelectedSong.subscribe(s => this.song = s);
+    this.selectedSongService.currentSelectedSong.subscribe(s => {
+      this.song = s;
+      this.getAlbum();
+    });
   }
 }
