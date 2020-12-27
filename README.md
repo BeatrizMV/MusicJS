@@ -4,7 +4,7 @@ MusicJs es una aplicación de reproductor de música. Permite al usuario reprodu
 
 Este  proyecto se ha generado con  [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
-# Ejecutando el prototipo
+## Ejecutando el prototipo
 
 git clone this repo
 cd ICCP0-P10/application and npm install
