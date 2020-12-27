@@ -17,9 +17,13 @@ Angular 10
 
 # Contributing
 
-Lea CONTRIBUTING.md para obtener detalles sobre nuestro código de conducta y el proceso para enviarnos solicitudes de extracción.
+MusicJS no se hace responsable, en ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos o lesivos en los contenidos, a pesar de haber adoptado todas las medidas tecnológicas necesarias para evitarlo.
 
-Autores
+MusicJS tampoco se responsabiliza del posible uso inapropiado que terceros realicen de este sitio web, ni de la información que transmiten a terceros a través de él. Los contenidos proporcionados a través de este sitio tienen carácter meramente formativo, por lo que el uso que de estos pueda hacer el usuario y las eventuales consecuencias, daños o perjuicios que pudiesen derivarse, son de la exclusiva responsabilidad del usuario.
+
+MusicJS se reserva el derecho de ejercitar las acciones legales que considere oportunas derivadas de cualquier uso ilícito por parte de terceros de los contenidos de este sitio.
+
+# Autores
 
 Beatriz Martínez Vélez
 
