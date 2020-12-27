@@ -13,7 +13,7 @@ open browser on http://localhost:4200/
 
 # Hecho con 
 
-Angular 10
+Angular 10 y Firebase
 
 # Contributing
 
