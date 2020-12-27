@@ -1,27 +1,32 @@
-# ICC02P10
+MusicJs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+MusicJs es una aplicación de reproductor de música. Permite al usuario reproducir, pausar la pista de audio. Además, el usuario puede reproducir la pista anterior o siguiente. Además de eso, el usuario puede cambiar el tiempo de reproducción actual usando una barra de búsqueda
 
-## Development server
+Este  proyecto se ha generado con  [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Ejecutando el prototipo
 
-## Code scaffolding
+git clone this repo
+cd ICCP0-P10/application and npm install
+run npm start
+open browser on http://localhost:4200/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Hecho con 
 
-## Build
+Angular 10
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Contributing
 
-## Running unit tests
+Lea CONTRIBUTING.md para obtener detalles sobre nuestro código de conducta y el proceso para enviarnos solicitudes de extracción.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Autores
 
-## Running end-to-end tests
+Beatriz Martínez Vélez
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Isaac Rovira Rocasalvas
 
-## Further help
+Maria Victoria Vilas Vieytes
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+License
+
+Este proyecto tiene la licencia del MIT; consulte el archivo LICENSE.md para obtener más detalles
