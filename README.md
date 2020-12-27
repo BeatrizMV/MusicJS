@@ -27,7 +27,7 @@ MusicJS se reserva el derecho de ejercitar las acciones legales que considere op
 
 Beatriz Martínez Vélez
 
-Isaac Rovira Rocasalvas
+Isaac Rovira Rocasalbas
 
 Maria Victoria Vilas Vieytes
 
